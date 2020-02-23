@@ -1,0 +1,531 @@
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+html {
+	min-height: 100%;
+}
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #1F3346;
+	background-repeat: no-repeat;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+}
+
+/* Navigation */
+nav {
+	max-width: 1000px;
+	margin: 0 auto;
+	height: 65px;
+
+}
+nav .brand {
+	display: inline-block;
+	position: relative;
+	padding: 0 20px;
+	height: 65px;
+	line-height: 65px;
+	overflow: hidden;
+	background-color: #596979;
+	color: #fff;
+}
+
+nav ul {
+	list-style: none;
+	display: inline-block;
+	float: right;
+}
+nav ul li {
+	display: inline-block;
+}
+nav ul li a {
+	padding:20px 20px;
+	text-decoration: none;
+	color: #fff;
+}
+nav ul li a:hover {
+	color:#596979;
+	text-decoration: underline;
+}
+
+header {
+	max-width: 1000px;
+	margin: 0 auto;
+	color: #fff;
+	text-align: center;
+	padding:  60px;
+}
+
+
+p {
+	font-size: 1em;
+	margin: 0;
+}
+img {
+	position: relative;
+	display: block;
+	min-height: 100%;
+	max-width: 100%;
+	height: auto;
+}
+.column {
+	float: left;
+	width: 100%;
+}
+section {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+figure {
+	position: relative;
+	margin: 10px;
+	position: relative;
+	min-width: 320px;
+	max-width: 480px;
+	max-height: 270px;
+	overflow: hidden;
+	color: #fff;
+}
+
+
+/***** Image Hover 1 **********/
+.image-hover-01 {
+	text-align: left;
+}
+.image-hover-01 .overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	padding: 30px;
+	overflow: hidden;
+}
+.image-hover-01 .overlay h2{
+	display: inline-block;
+	text-transform: uppercase;
+	padding: 4px 8px;
+	background-color: rgba(20,20,20,0.6);
+	transition: background-color 0.4s;
+}
+.image-hover-01:hover .overlay h2 {
+	background-color: rgba(20,20,20,1);
+}
+.image-hover-01 .overlay p {
+	opacity: 0;
+	transform: translateX(-5%);
+	transition: 0.4s;
+}
+.image-hover-01:hover .overlay p {
+	opacity: 1;
+	transform: translateX(0);
+}
+.image-hover-01 img {
+	max-width: none;
+	width: calc(100% +30px);
+	transform: translateX(0);
+	opacity: 1;
+	transition: transform 0.4s, opacity 0.4s;
+}
+.image-hover-01:hover img {
+	transform: translateX(-20px);
+	opacity: 0.7;
+}
+
+.image-hover-01.alternative .overlay {
+	text-align: left;
+}
+.image-hover-01.alternative img {
+	
+}
+
+
+/****** Image Hover 2 *****/
+.image-hover-02 {
+	text-align: center;
+}
+.image-hover-02 .overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	padding: 40px 20px;
+}
+.image-hover-02 .overlay h2 {
+	position: relative;
+	padding: 0.8em 0;
+	overflow: hidden;
+	font-weight: 300;
+	transform: translateY(40%);
+	transition: transform 0.3s;
+}
+.image-hover-02:hover .overlay h2 {
+	transform: translateY(0);
+}
+.image-hover-02 .overlay h2:after {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 3px;
+	background: #fff;
+	content: '';
+	transform: translate3d(-100%,0,0);
+	transition: transform 0.13s ease-in-out 0s;
+}
+.image-hover-02:hover .overlay h2:after {
+	transform: translate3d(0,0,0);
+	transition: transform 0.33s ease-in-out 0.3s;
+}
+.image-hover-02 .overlay p {
+	transform: translateX(100%);
+	transition: transform 0.33s 0.3s;
+}
+.image-hover-02:hover .overlay p {
+	transform: translateX(0);
+	transition-delay: 0;
+}
+.image-hover-02 img {
+	opacity: 1;
+	transition: opacity 0.33s;
+}
+.image-hover-02:hover img {
+	opacity: 0.7;
+}
+/* Image Hover 2 Alternative */
+.image-hover-02.alternative {
+	background-color: rgba(40,100,20,0.9);
+}
+.image-hover-02.alternative .overlay p {
+	transform: translateY(300%);
+	opacity: 0;
+	transition: all 0.33s 0.3s;
+}
+.image-hover-02.alternative:hover .overlay p {
+	transform: translateY(0);
+	opacity: 1;
+	transition-delay: 0;
+}
+.image-hover-02 .overlay a {
+	text-decoration: none;
+	color: #fff;
+	padding:5px 15px;
+	border: 1px solid #fff;
+	background-color: transparent;
+	text-transform: uppercase;
+	transition: color 0.33s, background-color 0.33s;
+}
+.image-hover-02 .overlay a:hover {
+	background-color: #fff;
+	color: #000;
+}
+
+/* Image Hover 3 */
+.image-hover-03 {
+	text-align: center;
+}
+.image-hover-03 img{
+	max-width: none;
+	width: calc(100% + 40px);
+	transform: translateX(-40px);
+	transition: transform 0.3s ease-in-out;
+}
+.image-hover-03:hover img {
+	transform: translateX(0);
+}
+.image-hover-03 .overlay {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgba(20,20,100,0.5);
+	transform: translate3d(100%,0,0);
+	opacity: 0;
+	transition: transform 0.3s ease-in-out, opacity 0.5s ease-in-out;
+}
+.image-hover-03:hover .overlay {
+	transform: translate3d(0,0,0);
+	opacity: 1;
+}
+.image-hover-03 .overlay h2 {
+	position: relative;
+	margin: 0;
+	padding: 0.6em 0;
+}
+/* Alternative */
+.image-hover-03.alternative .overlay {
+	background-color: rgba(246, 141, 36, 0.5);
+}
+
+.image-hover-03.alternative .overlay {
+	transform: translate3d(0,-100%,0);
+}
+.image-hover-03.alternative:hover .overlay {
+	transform: translate3d(0,0,0);
+}
+.image-hover-03.alternative img{
+	transition: all 0.3s;
+	transform: translateY(0);
+}
+
+.image-hover-03.alternative:hover img{
+	transform: translateY(-20px);
+}
+
+/* Image Effect 4 */
+.image-hover-04 {
+	text-align: center;
+}
+.image-hover-04 .overlay {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: transparent;
+	transition: background-color 0.3s;
+}
+.image-hover-04:hover .overlay {
+	background-color: rgba(20,90,20,0.4);
+}
+.image-hover-04 .overlay::before {
+	position: absolute;
+	width: 80%;
+	height: 80%;
+	top: 10%;
+	left: 10%;	
+	padding: 5px;
+	border: 1px solid #fff;	
+	opacity: 0;
+	transform: scale3d(0.8,0.8,0.8);
+	transition: opacity 0.33s, transform 0.33s;
+	content: '';
+}
+.image-hover-04:hover .overlay::before {
+	opacity: 1;
+	transform: scale3d(1,1,1);
+}
+.image-hover-04 .overlay h2 {
+	text-transform: uppercase;
+}
+.image-hover-04 .overlay p {
+	transform: scale(0.8, 0.8);
+	opacity: 0;
+	transition: all 0.33s;
+}
+.image-hover-04:hover .overlay p {
+	opacity: 1;
+	transform: scale(1,1);
+}
+.image-hover-04 img {
+	transform: scale(1.2,1.2);
+	transition: transform 0.4s;
+}
+.image-hover-04:hover img {
+	transform: scale(1,1);
+}
+
+
+.image-hover-04.alternative:hover .overlay {
+	background-color: rgba(156, 129, 153, 0.5);
+}
+.image-hover-04.alternative .overlay::before, .image-hover-04 .overlay p{
+	transform: scale(1.2,1.2);
+}
+.image-hover-04.alternative:hover .overlay::before, .image-hover-04:hover .overlay p {
+	transform: scale(1,1);
+}
+.image-hover-04.alternative img {
+	transform: scale(1,1);
+}
+.image-hover-04.alternative:hover img {
+	transform: scale(1.2,1.2);
+}
+
+/* Image Effect 5 */
+.image-hover-05 {
+	text-align: center;
+}
+.image-hover-05 .overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	padding: 10%;
+	background-color: transparent;
+	transition: background-color 1s;
+	z-index: 10;
+}
+.image-hover-05:hover .overlay {
+	background-color: rgba(10,10,10,0.8);
+}
+.image-hover-05 .overlay::before {
+	position: absolute;
+	width: 75%;
+	height: 80%;
+	left: 12.5%;
+	top: 10%;
+	border-radius: 3px;
+	padding: 20px 40px;
+	border-top: 4px solid #fff;
+	border-bottom: 4px solid #fff;
+	content: '';
+	transform: scale(0,1);
+	transition: transform 0.3s;	
+}
+.image-hover-05:hover .overlay::before {
+	transform: scale(1,1);
+	transition: transform 0.4s 0.2s;
+}
+.image-hover-05 .overlay h2 {
+	transform: translateY(100%);
+	transition: transform 0.5s;
+}
+.image-hover-05:hover .overlay h2 {
+	transform: translateY(0);
+}
+.image-hover-05 .overlay p {
+	transform: scale(0.2,1);
+	opacity: 0;
+	transition: transform 0.7s, opacity 0.4s;
+}
+.image-hover-05:hover .overlay p {
+	transform: scale(1,1);
+	opacity: 1;
+}
+
+.image-hover-05.alternative .overlay p {
+	transform: translateY(-100%);
+}
+.image-hover-05.alternative:hover .overlay p {
+	transform: translateY(100%);
+}
+.image-hover-05.alternative .overlay p a {
+	cursor: pointer;
+	text-decoration: none;
+	color: #fff;
+	padding: 5px 20px;
+	background-color: #9e8d77;
+	transition: background-color 0.3s;
+}
+.image-hover-05.alternative .overlay p a:hover {
+	background-color: #e2c298;
+
+}
+.image-hover-05.alternative img {
+	transform: scale(1.2,1.2);
+	transition: transform 0.4s;
+}
+.image-hover-05.alternative:hover img {
+	transform:scale(1,1) ;
+}
+.image-hover-05.alternative .overlay::before {
+	width: 80%;
+	left: 10%;
+	border-radius: 0;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+}
+.image-hover-05.alternative .overlay::after {
+	position: absolute;
+	width: 75%;
+	height: 90%;
+	top: 5%;
+	left: 12.5%;
+	border-left: 1px solid #fff;
+	border-right: 1px solid #fff;
+	content: '';
+	transform: scale(1,0);
+	transition: transform 0.3s;
+	z-index: -5;
+}
+.image-hover-05.alternative:hover .overlay::after {
+	transform: scale(1,1);
+}
+
+/* Image Hover Effect 6 */
+.image-hover-06 .overlay {
+	position: absolute;
+	width: 100%;
+	top: auto;
+	bottom: 0;
+	padding: 10px 15px; 
+	background-color: rgba(30,30,30,0.4);
+	overflow: hidden;
+	opacity: 0;
+	color:#fff;
+	transform: translate(0,100%);
+	transition: all 0.4s ease-in-out;
+}
+.image-hover-06:hover .overlay {
+	opacity: 1;
+	transform: translate(0,0);
+}
+.image-hover-06 .share-container {
+	position: absolute;
+	width: auto;
+	top: 0;
+	right: 0;
+	left: auto;
+	padding: 6px 12px;
+	opacity: 0;
+	font-size: 1.4em;
+	background-color: rgba(30,30,30,0.4);
+	transform: translate(0,-100%);
+	transition: all 0.4s ease-in-out;
+}
+.image-hover-06 .share-container i {
+	cursor: pointer;
+	color: inherit;
+	transition: color 0.4s ease-in-out;
+}
+.image-hover-06 .share-container i:hover {
+	color: #808080;
+}
+.image-hover-06:hover .share-container {
+	opacity: 1;
+	transform: translate(0,0);
+}
+.image-hover-06 img {
+	transform: scale(1,1);
+	transition: 0.5s;
+}
+.image-hover-06:hover img {
+	transform: scale(1.1,1.1);
+}
+
+
+.image-hover-06.alternative .overlay {
+	background-color: rgb(30,30,30);
+	opacity: 1;
+}
+.image-hover-06.alternative img {
+	transform: translateY(0);
+	transition: 0.4s ease-in-out;
+}
+.image-hover-06.alternative:hover img {
+	transform: translateY(-20px);
+}
+.image-hover-06.alternative .share-container {
+	background-color: rgb(30,30,30);
+}
+@media (min-width: 900px) {
+	body {
+		font-size: 18px;
+	}
+	.column {
+		width: 50%;
+	}
+}
